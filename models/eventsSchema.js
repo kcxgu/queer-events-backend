@@ -32,7 +32,6 @@ const eventsSchema = new mongoose.Schema({
         },
         addressLine2: {
             type: String,
-            required: true,
         },
         city: {
             type: String,
