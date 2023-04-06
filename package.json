@@ -1,0 +1,29 @@
+{
+  "name": "queer-events-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "NODE_ENV=dev nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcxgu/queer-events-backend.git"
+  },
+  "author": "Kaycee Gu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcxgu/queer-events-backend/issues"
+  },
+  "homepage": "https://github.com/kcxgu/queer-events-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.2.0",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
