@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import { eventsRouter } from "./routes/events.js";
+import { signUpRouter } from "./routes/signup.js";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use("/events", eventsRouter)
+app.use("/sign-up", signUpRouter)
 
 const host = process.env.HOST;
 const port = process.env.PORT;
