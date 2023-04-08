@@ -12,8 +12,10 @@ forgotPasswordRouter.route("/")
             if (data) {
                 const name = data.name;
                 const email = data.email;
-                const url = `http://localhost:3000/auth/reset-password`;
+                const id = data._id;
+                const url = `http://localhost:3000/auth/reset-password/${id}`;
                 forgotPasswordEmail(email, url, name);
+                return res.send({ message: "Success!" })
             } else {
                 return res.send({ message: "We cannot find your email address" })
             }
