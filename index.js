@@ -5,6 +5,7 @@ import express from "express";
 import mongoose from "mongoose";
 import { eventsRouter } from "./routes/events.js";
 import { signUpRouter } from "./routes/signup.js";
+import { logInRouter } from "./routes/login.js";
 
 const app = express();
 
@@ -15,8 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use("/events", eventsRouter)
-app.use("/sign-up", signUpRouter)
+app.use("/events", eventsRouter);
+app.use("/sign-up", signUpRouter);
+app.use("/log-in", logInRouter);
 
 const host = process.env.HOST;
 const port = process.env.PORT;
