@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import { eventsRouter } from "./routes/events.js";
 import { signUpRouter } from "./routes/signup.js";
 import { logInRouter } from "./routes/login.js";
+import { forgotPasswordRouter } from "./routes/forgotPassword.js";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(cors());
 app.use("/events", eventsRouter);
 app.use("/sign-up", signUpRouter);
 app.use("/log-in", logInRouter);
+app.use("/forgot-password", forgotPasswordRouter);
 
 const host = process.env.HOST;
 const port = process.env.PORT;
