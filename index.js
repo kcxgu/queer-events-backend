@@ -7,6 +7,7 @@ import { eventsRouter } from "./routes/events.js";
 import { signUpRouter } from "./routes/signup.js";
 import { logInRouter } from "./routes/login.js";
 import { forgotPasswordRouter } from "./routes/forgotPassword.js";
+import { resetPasswordRouter } from "./routes/resetPassword.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use("/events", eventsRouter);
 app.use("/sign-up", signUpRouter);
 app.use("/log-in", logInRouter);
 app.use("/forgot-password", forgotPasswordRouter);
+app.use("/reset-password", resetPasswordRouter);
 
 const host = process.env.HOST;
 const port = process.env.PORT;

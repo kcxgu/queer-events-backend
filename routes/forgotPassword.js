@@ -13,7 +13,7 @@ forgotPasswordRouter.route("/")
                 const name = data.name;
                 const email = data.email;
                 const id = data._id;
-                const url = `http://localhost:3000/auth/reset-password/${id}`;
+                const url = `http://localhost:3000/reset-password/${id}`;
                 forgotPasswordEmail(email, url, name);
                 return res.send({ message: "Success!" })
             } else {
