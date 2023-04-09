@@ -8,6 +8,7 @@ import { signUpRouter } from "./routes/signup.js";
 import { logInRouter } from "./routes/login.js";
 import { forgotPasswordRouter } from "./routes/forgotPassword.js";
 import { resetPasswordRouter } from "./routes/resetPassword.js";
+import { removeEventRouter } from "./routes/removeEvent.js";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use("/events", eventsRouter);
+app.use("/remove-event", removeEventRouter);
 app.use("/sign-up", signUpRouter);
 app.use("/log-in", logInRouter);
 app.use("/forgot-password", forgotPasswordRouter);
